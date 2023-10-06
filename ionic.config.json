@@ -1,0 +1,7 @@
+{
+  "name": "SismosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
