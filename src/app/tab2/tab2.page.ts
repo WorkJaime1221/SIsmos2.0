@@ -29,7 +29,6 @@ export class Tab2Page {
       this.filteredEarthquakes = this.earthquakes.features; // Inicialmente, muestra todos los terremotos
     });
   }
-  //Todo: Modifica el metodo
   filterEarthquakes() {
     this.filteredEarthquakes = this.earthquakes.features
       .filter((earthquake: Earthquake) => {
