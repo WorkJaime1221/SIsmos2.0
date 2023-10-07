@@ -1,4 +1,14 @@
 import { Component } from '@angular/core';
+import { SismosService } from '../services/sismos.service';
+
+interface Earthquake {
+  properties: {
+    place: string;
+    // ... otras propiedades
+  };
+  // ... otras propiedades
+}
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +17,25 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  earthquakes: any;
+  filteredEarthquakes: any[] = [] ; 
+  searchTerm: string = '';
 
+  constructor(private earthquakeService: SismosService) { }
+
+  ngOnInit(): void {
+    this.earthquakeService.getEarthquakes().subscribe(data => {
+      this.earthquakes = data;
+      this.filteredEarthquakes = this.earthquakes.features; // Inicialmente, muestra todos los terremotos
+    });
+  }
+  //Todo: Modifica el metodo
+  filterEarthquakes() {
+    this.filteredEarthquakes = this.earthquakes.features
+      .filter((earthquake: Earthquake) => {
+        const place = earthquake.properties?.place;
+        return place && place.toLowerCase().includes(this.searchTerm.toLowerCase());
+      })
+      .slice(0, 5); // Mostrar solo los primeros 5 resultados
+  }
 }
