@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
 import { SismosService } from 'src/app/services/sismos.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tab1',
