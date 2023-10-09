@@ -4,9 +4,7 @@ import { SismosService } from '../services/sismos.service';
 interface Earthquake {
   properties: {
     place: string;
-    // ... otras propiedades
   };
-  // ... otras propiedades
 }
 
 

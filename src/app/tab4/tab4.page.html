@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tab4</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-searchbar (ionInput)="searchByDate($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let earthquake of filteredEarthquakes">
+      <ion-label>
+        <h2>Lugar: {{ earthquake?.properties?.place }}</h2>
+        <p>Magnitud: {{ earthquake?.properties?.mag }}</p>
+        <p>Fecha: {{ formatDate(earthquake?.properties?.time) }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+
+
+</ion-content>

@@ -13,5 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterEarthquakes()"></ion-searchbar>
+
+  <ion-list>
+    <ion-card *ngFor="let earthquake of filteredEarthquakes.slice(0, 5)">
+      <ion-card-header>
+        <ion-card-title>Lugar: {{ earthquake?.properties?.place }}</ion-card-title>
+        <ion-card-subtitle>Magnitud: {{ earthquake?.properties?.mag }}</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <p>Fecha: {{ earthquake?.properties?.time | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
 </ion-content>
