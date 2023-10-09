@@ -14,16 +14,20 @@
 
   <ion-searchbar (ionInput)="searchByDate($event)"></ion-searchbar>
 
-  <ion-list>
-    <ion-item *ngFor="let earthquake of filteredEarthquakes">
-      <ion-label>
-        <h2>Lugar: {{ earthquake?.properties?.place }}</h2>
-        <p>Magnitud: {{ earthquake?.properties?.mag }}</p>
-        <p>Fecha: {{ earthquake?.properties?.time | date:'yyyy-MM-dd HH:mm:ss' }}</p>
-      </ion-label>
-    </ion-item>
-    
+  <ion-list class="earthquake-list" style="padding: 10px;">
+    <ion-card *ngFor="let earthquake of filteredEarthquakes.slice(0, 5)" style="margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; background-color: #f5f5f5;" class="earthquake-card">
+      <ion-card-header style="background-color: #3498db; color: #fff;" class="header">
+        <ion-card-title style="font-size: 1.2em;" class="title">Lugar: {{ earthquake?.properties?.place }}</ion-card-title>
+        <ion-card-subtitle style="font-size: 1em;" class="subtitle">Magnitud: {{ earthquake?.properties?.mag }}</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content style="background-color: #ecf0f1;" class="content">
+        <p style="color: #2c3e50;" class="date">Fecha: {{ earthquake?.properties?.time | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
+  
+
   
 
 
