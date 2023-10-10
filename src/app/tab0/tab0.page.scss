@@ -1,0 +1,61 @@
+/* Estilo para el título de bienvenida */
+.welcome-title {
+    color: #ffffff;
+  }
+  
+  /* Estilo para la barra de navegación */
+  ion-toolbar {
+    --background: #3498db;
+  }
+  
+  /* Estilo para la tarjeta de presentación */
+  .presentation-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Estilos para el contenido de la tarjeta */
+  .card-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    color: #3498db;
+    font-size: 28px;
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilos para las secciones de la tarjeta */
+  .card-description {
+    padding: 0 20px;
+    background-color: #ffffff;
+  }
+  
+  .section-title {
+    color: #3498db;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .section-content {
+    color: #6c757d;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,20 @@
+.welcome-title {
+    color: #ffffff;
+  }
+  
+  /* Estilo para la barra de navegación */
+  ion-toolbar {
+    --background: #3498db;
+  }
+
+  /* Custom style for the search bar */
+.custom-searchbar {
+    --background: #f2f2f2; /* Background color */
+    --placeholder-color: #999; /* Placeholder text color */
+    --searchbar-icon-color: #333; /* Search icon color */
+    --searchbar-input-color: #333; /* Input text color */
+    --searchbar-input-border-color: #ccc; /* Input border color */
+    --searchbar-input-border-radius: 10px; /* Input border radius */
+    --searchbar-input-height: 40px; /* Input height */
+  }
+  

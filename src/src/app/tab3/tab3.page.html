@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Magnitud
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Magnitud</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterEarthquakes()"></ion-searchbar>
+
+  <ion-list class="earthquake-list" style="padding: 10px;">
+    <ion-card *ngFor="let earthquake of filteredEarthquakes.slice(0, 5)" class="earthquake-card" style="margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; background-color: #f5f5f5;">
+      <ion-card-header class="header" style="background-color: #3498db; color: #fff;">
+        <ion-card-title class="title" style="font-size: 1.2em;">Lugar: {{ earthquake?.properties?.place }}</ion-card-title>
+        <ion-card-subtitle class="subtitle" style="font-size: 1em;">Magnitud: {{ earthquake?.properties?.mag }}</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content class="content" style="background-color: #ecf0f1;">
+        <p class="date" style="color: #2c3e50;">Fecha: {{ earthquake?.properties?.time | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+  
+  
+</ion-content>

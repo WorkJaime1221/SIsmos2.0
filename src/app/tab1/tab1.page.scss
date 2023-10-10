@@ -1,0 +1,40 @@
+/* Estilo para el contenedor de tabs */
+ion-tabs {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+  }
+  
+  /* Estilo para la barra de tabs */
+  ion-tab-bar {
+    background-color: #555; /* Color de fondo de la barra de tabs */
+  }
+  
+  /* Estilo para los botones de tabs */
+  ion-tab-button {
+    color: white; /* Color del texto del botón de tab */
+  }
+  
+  /* Estilo para el icono en los botones de tabs */
+  ion-icon {
+    font-size: 24px; /* Tamaño del icono */
+  }
+  
+  /* Estilo para las etiquetas de los botones de tabs */
+  ion-label {
+    font-size: 12px; /* Tamaño del texto */
+  }
+  
+  /* Estilo para los botones de tabs cuando están activos */
+  ion-tab-button[aria-selected=true] {
+    background-color: #777; /* Color de fondo cuando el tab está activo */
+    color: #fff; /* Color del texto cuando el tab está activo */
+  }
+
+.welcome-title {
+    color: #ffffff;
+  }
+  
+  /* Estilo para la barra de navegación */
+  ion-toolbar {
+    --background: #3498db;
+  }
